@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:admin="http://webns.net/mvcb/">
+	<foaf:PersonalProfileDocument rdf:about="">
+		<foaf:maker rdf:resource="#me"/>
+		<foaf:primaryTopic rdf:resource="#me"/>
+		<admin:generatorAgent rdf:resource="http://www.ldodds.com/foaf/foaf-a-matic"/>
+		<admin:errorReportsTo rdf:resource="mailto:leigh@ldodds.com"/>
+	</foaf:PersonalProfileDocument>
+	<foaf:Person rdf:ID="me">
+		<foaf:name>Felipe Meneguzzi</foaf:name>
+		<foaf:title>Dr</foaf:title>
+		<foaf:givenname>Felipe</foaf:givenname>
+		<foaf:family_name>Meneguzzi</foaf:family_name>
+		<foaf:mbox_sha1sum>caf4e63bcf6cf5b4568ea7b8739afd71b954c514</foaf:mbox_sha1sum>
+		<foaf:homepage rdf:resource="http://www.meneguzzi.eu/felipe"/>
+		<foaf:depiction rdf:resource="http://www.meneguzzi.eu/felipe/images/felipe3.jpg"/>
+		<foaf:workplaceHomepage rdf:resource="http://www.cs.cmu.edu/~meneguzz/"/>
+		<foaf:workInfoHomepage rdf:resource="http://www.ri.cmu.edu/person.html?person_id=2264"/>
+		<foaf:schoolHomepage rdf:resource="http://www.kcl.ac.uk"/>
+		<foaf:knows>
+			<foaf:Person>
+				<foaf:name>Michael Luck</foaf:name>
+				<foaf:mbox_sha1sum>1afb630e5d0fc64a53e89f5fb8d1a9b54076ec6a</foaf:mbox_sha1sum>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person>
+				<foaf:name>Katia Sycara</foaf:name>
+				<foaf:mbox_sha1sum>80b0eee12d87ac02b057b13569fcf242afd72c8d</foaf:mbox_sha1sum>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person>
+				<foaf:name>Nir Oren</foaf:name>
+				<foaf:mbox_sha1sum>f1ea4845d0daacc2b88aeaa09a4ac891228a5ba1</foaf:mbox_sha1sum>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person>
+				<foaf:name>Simon Parsons</foaf:name>
+				<foaf:mbox_sha1sum>f2c3cc57da8942cb35a1ad9c3d4aea863703a447</foaf:mbox_sha1sum>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person>
+				<foaf:name>Wamberto Vasconcelos</foaf:name>
+				<foaf:mbox_sha1sum>dc84a059585a01c5587d4b30fec8fc15b16d11b1</foaf:mbox_sha1sum>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person>
+				<foaf:name>Yuqing Tang</foaf:name>
+				<foaf:mbox_sha1sum>a2e9ebf203779b769db9f7d3e16d90257d4f6b77</foaf:mbox_sha1sum>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person>
+				<foaf:name>Sanjay Modgil</foaf:name>
+				<foaf:mbox_sha1sum>2865b5195a81d73152c72adaca688ae1fd266d3b</foaf:mbox_sha1sum>
+			</foaf:Person>
+		</foaf:knows>
+	</foaf:Person>
+</rdf:RDF>
