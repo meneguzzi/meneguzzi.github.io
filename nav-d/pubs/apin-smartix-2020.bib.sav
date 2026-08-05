@@ -1,0 +1,14 @@
+% Encoding: UTF-8
+
+@Article{Paludo2020,
+  author   = {Paludo Licks, Gabriel and Colleoni Couto, Julia and de Fátima Miehe, Priscilla and de Paris, Renata and Dubugras Ruiz, Duncan and Meneguzzi, Felipe},
+  title    = {SmartIX: A database indexing agent based on reinforcement learning},
+  issn     = {1573-7497},
+  url      = {https://doi.org/10.1007/s10489-020-01674-8},
+  abstract = {Configuring databases for efficient querying is a complex task, often carried out by a database administrator. Solving the problem of building indexes that truly optimize database access requires a substantial amount of database and domain knowledge, the lack of which often results in wasted space and memory for irrelevant indexes, possibly jeopardizing database performance for querying and certainly degrading performance for updating. In this paper, we develop the SmartIX architecture to solve the problem of automatically indexing a database by using reinforcement learning to optimize queries by indexing data throughout the lifetime of a database. We train and evaluate SmartIX performance using TPC-H, a standard, and scalable database benchmark. Our empirical evaluation shows that SmartIX converges to indexing configurations with superior performance compared to standard baselines we define and other reinforcement learning methods used in related work.},
+  journal  = {Applied Intelligence},
+  refid    = {Paludo Licks2020},
+  year     = {2020},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
