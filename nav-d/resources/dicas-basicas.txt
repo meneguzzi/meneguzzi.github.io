@@ -1,0 +1,8 @@
+1) Usar SEMPRE correção ortográfica (spellchecker): se eu encontrar UMA palavra com grafia errada mesmo (tipo wich, wat ou algo assim), eu vou dar reply no email me recusando a ler
+2) Sempre que desconfiarem da própria fluência, ao escrever qualquer sentença com uma estrutura que não possuem confiança, escrever a sentença no google e procurar um texto de nativo com a mesma estrutura para confirmar. Um exemplo específico, eu não quer nunca mais ver o verbo "to focus" escrito com qualquer outra preposição que não seja "on", então "John Doe's work focuses on"
+3) SEMPRE consultar um dicionário para ver o artigo correto a ser usado no sentido que vocês querem dar para uma palavra (como focus on). Se vocês usam Mac, o Dictionary tem tudo isto, se estão no Windows ou no Linux, usem o WordNet (http://wordnet.princeton.edu/wordnet/download/current-version/), que é até melhor do que o Dictionary do Mac pois tem não só os artigos, como também Thesaurus e outras relações semânticas como antônimos.
+4) Não adjetivar desnecessariamente, inglês é para ser uma língua compacta e vocês não estão escrevendo um romance. Então "a popular agent architecture called BDI" eu não quero ver.
+5) Não usar sinônimos de palavras com sentido técnico, então não usar "strategy" no lugar de "plan", "verify" no lugar de "check" e "system" no lugar de "algorithm"
+6) Não fazer a gauchada de colocar artigos na frente de pronomes pessoais específicos. Então "I spoke with Felipe" (não "with the Felipe") e NUNCA "The Section 4 talks about", sempre "Section 4 talks about" e assim por diante.
+
+(caso o texto esteja estranho, force seu browser a usar UTF-8)
