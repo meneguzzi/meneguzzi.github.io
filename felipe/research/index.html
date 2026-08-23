@@ -121,6 +121,12 @@
               >Publications</a>
             </li><li class="masthead__menu-item">
               <a
+                href="/felipe/software/"
+                
+                
+              >Software</a>
+            </li><li class="masthead__menu-item">
+              <a
                 href="/felipe/people/"
                 
                 
@@ -131,6 +137,12 @@
                 
                 
               >Students</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/felipe/resources/"
+                
+                
+              >Resources</a>
             </li><li class="masthead__menu-item">
               <a
                 href="/felipe/about/"
@@ -319,13 +331,15 @@
           <aside class="sidebar__right sticky">
             <nav class="toc" aria-label="Table of contents">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#automated-planning">Automated Planning</a><ul><li><a href="#plan-intent-and-goal-recognition">Plan, Intent, and Goal Recognition</a></li><li><a href="#ai-planning-formalisms">AI Planning Formalisms</a></li><li><a href="#reinforcement-learning">Reinforcement Learning</a></li></ul></li><li><a href="#machine-learning-for-fmri">Machine Learning for fMRI</a></li><li><a href="#multiagent-systems">Multiagent Systems</a><ul><li><a href="#normative-reasoning">Normative Reasoning</a></li><li><a href="#agent-reasoning-and-the-bdi-model">Agent Reasoning and the BDI Model</a></li><li><a href="#agent-programming-languages">Agent Programming Languages</a></li></ul></li><li><a href="#projects">Projects</a><ul><li><a href="#current">Current</a></li><li><a href="#past">Past</a></li></ul></li><li><a href="#software">Software</a><ul><li><a href="#web-planner">Web Planner</a></li><li><a href="#ν-bdi">ν-BDI</a></li><li><a href="#emplan--javagp">EmPlan / JavaGP</a></li><li><a href="#htn2mdp">HTN2MDP</a></li><li><a href="#any-time-cognition---antico">Any Time Cognition - ANTICO</a></li><li><a href="#agentspeakpl---peleus">AgentSpeak(PL) - Peleus</a></li><li><a href="#jason-scripted-environment">Jason Scripted Environment</a></li><li><a href="#normative-agentspeak---iovis">Normative AgentSpeak - Iovis</a></li><li><a href="#distributed-planning---kastor">Distributed Planning - Kastor</a></li><li><a href="#orpheus">Orpheus</a></li><li><a href="#x2-bdi--agentviewer">X2-BDI / AgentViewer</a></li><li><a href="#docdb">DocDB</a></li><li><a href="#open-iterm-here">Open iTerm Here</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#automated-planning">Automated Planning</a><ul><li><a href="#plan-intent-and-goal-recognition">Plan, Intent, and Goal Recognition</a></li><li><a href="#ai-planning-formalisms">AI Planning Formalisms</a></li><li><a href="#reinforcement-learning">Reinforcement Learning</a></li></ul></li><li><a href="#machine-learning-for-fmri">Machine Learning for fMRI</a></li><li><a href="#multiagent-systems">Multiagent Systems</a><ul><li><a href="#normative-reasoning">Normative Reasoning</a></li><li><a href="#agent-reasoning-and-the-bdi-model">Agent Reasoning and the BDI Model</a></li><li><a href="#agent-programming-languages">Agent Programming Languages</a></li></ul></li><li><a href="#projects">Projects</a><ul><li><a href="#current">Current</a></li><li><a href="#past">Past</a></li></ul></li></ul>
             </nav>
           </aside>
         
         <p>Selected publications in each section are drawn from the BibTeX in <code class="language-plaintext highlighter-rouge">pubs/</code>,
 which is the single source of truth. The full list is on the
-<a href="/felipe/publications/">Publications</a> page.</p>
+<a href="/felipe/publications/">Publications</a> page, and the tools and
+prototypes this work produced are on
+<a href="/felipe/software/">Software</a>.</p>
 
 <h2 id="automated-planning">Automated Planning</h2>
 
@@ -1374,243 +1388,6 @@ goal recognition techniques.</p>
 environments and develop algorithms and techniques to enable behaviour
 modification at runtime in response to dynamically changing norms.</p>
 
-<h2 id="software">Software</h2>
-
-<h3 id="web-planner">Web Planner</h3>
-
-<p>Web Planner is an online interface with an underlying PDDL-based automated
-planner for deterministic planning. This interface is the result of work from my
-PhD student Mauricio and an undergraduate student and allows end users to
-visualise both the formalisation of the operators and the way heuristics evaluate
-the state space towards the goal. Work on the operator visualisation language was
-published in the paper <a href="http://www.aaai.org/ocs/index.php/FLAIRS/FLAIRS16/paper/view/12966">DOVETAIL - An abstraction for Classical Planning using a
-Visual Metaphor</a>,
-whereas work on the heuristic visualisation was published in the paper <a href="/felipe/pubs/uisp-web-planner-2017.pdf">WEB
-PLANNER: A Tool to Develop Classical Planning Domains and Visualize Heuristic
-State-Space Search</a>.</p>
-
-<p><strong>Downloads:</strong> <a href="https://github.com/martinduartemore/web-planner">WebPlanner source</a>,
-and the working app as a Heroku app at
-<a href="http://web-planner.herokuapp.com">web-planner.herokuapp.com</a>.</p>
-
-<h3 id="ν-bdi">ν-BDI</h3>
-
-<p>ν-BDI (nu-BDI) is an interpreter for a normative agent that uses constraints
-on plan instantiations to enforce normative stipulations of obligations and
-prohibitions. This interpreter is the result of the work I have been carrying out
-with Nir Oren, Wamberto Vasconcelos and Michael Luck, most of which is currently
-unpublished. The basic work on this interpreter can be found in the paper <a href="/felipe/pubs/acita-2010-nuBDI.pdf">Using
-Constraints for Norm-aware BDI Agents</a>.
-It is implemented as an extension of the popular
-<a href="http://jason.sourceforge.net/">Jason</a> interpreter.</p>
-
-<p><strong>Downloads:</strong> <a href="https://github.com/meneguzzi/nu-bdi">Nu-BDI</a>.</p>
-
-<h3 id="emplan--javagp">EmPlan / JavaGP</h3>
-
-<p>EmPlan is a planner I implemented during my MSc for my planning <a href="#x2-bdi--agentviewer">BDI
-agent</a>, while JavaGP is a recent Java reimplementation I
-made of the same algorithm for <a href="#agentspeakpl---peleus">integration with Jason</a>.
-After having noticed that there are no full Java implementations of Graphplan
-around on the internet, I decided to share my code.</p>
-
-<p><strong>Downloads:</strong> <a href="https://github.com/pucrs-automated-planning/javagp">JavaGP@Github</a>.</p>
-
-<h3 id="htn2mdp">HTN2MDP</h3>
-
-<p>HTN2MDP is a probabilistic planner that takes as input a deterministic HTN
-domain, described in a subset of the popular <a href="http://sourceforge.net/projects/shop/">JSHOP HTN domain description
-language</a>. It generates a policy that
-tells, for each possible state in the domain, what is the best action to take.
-This planning consists of converting the HTN domain into a stochastic planning
-domain in the MDP format, and planning using an MDP solver.</p>
-
-<p><strong>Downloads:</strong> <a href="https://github.com/pucrs-automated-planning/htn2mdp">HTN2MDP source</a>.
-The package includes the binaries for <a href="https://sourceforge.net/projects/jason/files/jason/version%201.3.1/">Jason
-1.3.1</a> as
-well as <a href="http://code.google.com/p/aima-java/">AIMA Libraries</a> (for the MDP
-solver).</p>
-
-<h3 id="any-time-cognition---antico">Any Time Cognition - ANTICO</h3>
-
-<p>ANTICO is a proof-of-concept demo of a proactive information assistant I helped
-implement while at Carnegie Mellon University. It uses plan/intention recognition
-and probabilistic plan prediction to detect a human user’s future information
-needs in order to provide time-sensitive information and guidance. The demo
-itself is intended to help a disaster response coordinator to go through all
-necessary steps to react to natural disasters and/or terrorist attacks.</p>
-
-<p><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=2aHH4Ip0pvI">ANTICO demo on YouTube</a>.</p>
-
-<h3 id="agentspeakpl---peleus">AgentSpeak(PL) - Peleus</h3>
-
-<p>Peleus is an implementation of planning capabilities within the AgentSpeak
-architecture, also known as
-<a href="/felipe/pubs/dalt07light.pdf">AgentSpeak(PL)</a> as published in two
-DALT papers: <a href="/felipe/pubs/dalt2007.pdf">Composing high-level plans for declarative agent
-programming</a>, and <a href="/felipe/pubs/dalt2008.pdf">Leveraging new plans in
-AgentSpeak(PL)</a>. AgentSpeak consists of an
-agent architecture following the tradition of PRS agents, which define agents
-with procedural reasoning capabilities. Procedural reasoning is a mechanism used
-by agents to improve their runtime efficiency by limiting the agent’s choices to
-concrete plans of actions that are adopted whenever a certain well-defined
-situation is detected by the agent. This constrains the agent’s flexibility at
-runtime, since a designer has to foresee every possible relevant situation and
-define complete adequate plans for the agent to react to them. Peleus allows an
-agent to reason over declarative goals (as well as procedural ones) and generate
-plans to satisfy them by composing lower-level AgentSpeak plans. To compose these
-plans, Peleus infers the preconditions and effects of AgentSpeak plans and
-convert them into a STRIPS representation which is handed down to an external
-planning module. In this version of Peleus, we allow a designer to choose between
-the same planning process used by X-BDI, or an open-source Java implementation of
-<a href="http://www.cs.cmu.edu/~avrim/graphplan.html">Graphplan</a> available at
-<a href="https://sourceforge.net/">SourceForge</a>
-(<a href="https://github.com/pucrs-automated-planning/javagp">JavaGP</a>). Peleus was
-implemented as an extension to <a href="http://jason.sourceforge.net/">Jason</a>, which is a
-Java implementation of AgentSpeak. The name of this implementation is to conform
-with their AgentSpeak implementation, namely Jason from the Greek tale of the
-argonauts.</p>
-
-<p><strong>Downloads:</strong> <a href="https://github.com/meneguzzi/Peleus">Peleus source</a>. The package
-includes the binaries for <a href="http://prdownloads.sourceforge.net/jason/Jason-0.9.3.zip?download">Jason
-0.9.3</a> as well
-as <a href="https://github.com/pucrs-automated-planning/javagp">JavaGP</a>, and
-<a href="#emplan--javagp">EmPlan</a>.</p>
-
-<h3 id="jason-scripted-environment">Jason Scripted Environment</h3>
-
-<p>This is a utility package including an implementation of a Jason environment
-driven by a script to generate new perception events at specific times during the
-execution of a Jason multiagent system. Class <code class="language-plaintext highlighter-rouge">ScriptedEnvironment</code> takes as a
-parameter an XML file with nodes containing a list of perceptual updates for all
-agents and the time at which these updates must be sent to all agents in the
-environment. This script file follows the schema available at
-<a href="http://www.meneguzzi.eu/schema/jason-script.xsd">www.meneguzzi.eu/schema/jason-script.xsd</a>,
-an example of usage of this script is available at
-<a href="http://www.meneguzzi.eu/schema/script.xml">www.meneguzzi.eu/schema/script.xml</a>.</p>
-
-<p><strong>Downloads:</strong> <a href="https://github.com/meneguzzi/JasonEnvironment">ScriptedEnvironment
-source</a> and
-<a href="/felipe/download/jasonenv.jar">binary</a>. The package includes the
-binaries for Jason 1.2.</p>
-
-<h3 id="normative-agentspeak---iovis">Normative AgentSpeak - Iovis</h3>
-
-<p>Iovis is an implementation of an AgentSpeak interpreter that includes a
-meta-level reasoning action library, and plans to process and comply to norms,
-following the technique from the paper <a href="/felipe/pubs/aamas-norms-2009.pdf">Norm-based behaviour modification in BDI
-agents</a>. With Iovis, a developer
-can deploy agents that change their plan libraries in reaction to norms from the
-environment, or from other agents (through <a href="/felipe/pubs/aamas2008.pdf">electronic
-contracts</a>, for example).</p>
-
-<p><strong>Downloads:</strong> <a href="https://github.com/meneguzzi/Iovis">Iovis source</a>. The package
-includes the binaries for Jason 1.2 as well as the <a href="#jason-scripted-environment">Jason Scripted
-Environment</a>.</p>
-
-<h3 id="distributed-planning---kastor">Distributed Planning - Kastor</h3>
-
-<p>Kastor is an implementation of an AgentSpeak interpreter extended with <a href="http://portal.acm.org/citation.cfm?id=1160869">plan
-patterns</a> for the creation of
-distributed plans following the technique from the paper <a href="/felipe/pubs/at2ai2008.pdf">Interaction among
-agents that plan</a>. In
-<a href="/felipe/pubs/at2ai2008-slides.pdf">Kastor</a>, a developer can define
-<em>external plans</em> for each agent through the <em>EP</em> plan pattern, which creates a
-communication endpoint in the sharing agent allowing other agents in the society
-to request this plan to be executed on their behalf.</p>
-
-<p><strong>Downloads:</strong> <a href="https://github.com/meneguzzi/Kastor">Kastor source</a> and
-<a href="/felipe/download/kastor.jar">binary</a>. The package includes the
-binaries for Jason 1.2 as well as <a href="#agentspeakpl---peleus">Peleus</a>, and the
-<a href="#jason-scripted-environment">Jason Scripted Environment</a>.</p>
-
-<h3 id="orpheus">Orpheus</h3>
-
-<p>Orpheus is an implementation of an AgentSpeak-based client for the classic
-version of the <a href="http://www.sics.se/tac/page.php?id=1">Trading Agent Competition</a>
-(TAC). At the moment the implementation is a rather simple adapter pattern
-bridging a Jason agent to the reference Java AgentWare library provided by
-<a href="http://www.sics.se/">SICS</a> to do the low-level communication with the <a href="http://www.sics.se/tac/page.php?id=12#server">TAC
-server</a>. This, as well as other
-technical limitations, should be addressed some time in the future. As with
-Peleus, this software was named to conform with Jason’s argonauts.</p>
-
-<p><strong>Downloads:</strong> <a href="https://github.com/meneguzzi/tac-jason">Orpheus source</a>. The
-package includes the binary package of
-<a href="http://prdownloads.sourceforge.net/jason">Jason</a>, as well as the binary package
-of <a href="http://www.sics.se/tac/page.php?id=12#aw">AgentWare</a>.</p>
-
-<h3 id="x2-bdi--agentviewer">X2-BDI / AgentViewer</h3>
-
-<p>X2-BDI and Agent Viewer are two programs implemented as part of the research
-conducted throughout my masters course in order to verify the viability of the
-theories defended in my masters dissertation. X2-BDI is an extension to the X-BDI
-agent model/interpreter created by Michael Móra in his Ph.D. thesis, it includes
-a C++ implementation of the Graphplan planner which is used by the agent in order
-to perform means-ends reasoning. Agent Viewer is a Java tool that provides a
-graphical interface intended to ease interaction with X2-BDI, which was
-originally done through a Prolog console.</p>
-
-<p><strong>Downloads:</strong></p>
-
-<ul>
-  <li><a href="/felipe/download/xbdi-1.4.zip">X2-BDI</a> (requires SICStus Prolog
-version 3.8.3)</li>
-  <li><a href="https://github.com/pucrs-automated-planning/emplan">EmPlan</a> (C++
-implementation of Graphplan), also available as a
-<a href="/felipe/download/emplan-bin.zip">binary</a></li>
-  <li><a href="/felipe/download/avinstaller.jar">Agent Viewer (Java installer)</a></li>
-</ul>
-
-<p>It is worth mentioning that these are experimental software programs that were
-not subjected to any formal testing process. Usage of the programs or its sources
-is free of charge for non-commercial use, otherwise it is necessary to contact
-the author (i.e. me).</p>
-
-<h3 id="docdb">DocDB</h3>
-
-<p>DocDB is an extremely simple program that detects duplicates of files within a
-specific local folder. It was created to help me solve the problem of multiple
-versions of papers I download in the course of “gathering” research papers
-throughout the year for my PhD. Though I always try to be disciplined and keep a
-folder structure just for papers, and I try to categorize the PDF/PS files as I
-download them, as the number of files I download increases it becomes harder to
-remember things I downloaded or not, and I end up saving the same paper under
-different names in different folders. As another helper for this chore of
-bookkeeping research papers I use <a href="http://jabref.sourceforge.net/">JabRef</a>, which
-is a brilliant program to manage a
-<a href="http://en.wikipedia.org/wiki/Bibtex">BibTeX</a> reference database. Since DocDB
-cannot even be qualified as
-<a href="http://en.wikipedia.org/wiki/Development_stage#Alpha">alpha</a>-quality software,
-user discretion is advised. Even though it is unlikely that any critical bug is
-present given the simplicity of this software, I recommend backing up the target
-files before executing DocDB.</p>
-
-<p><strong>Downloads:</strong> <a href="https://github.com/meneguzzi/docdb">DocDB source</a> and
-<a href="/felipe/download/docdb.jar">binary</a>. No build files have been
-created, but <a href="http://www.eclipse.org/">Eclipse</a> project files are included in the
-source code, making it simple to compile and recreate the executable JAR file
-using Eclipse’s interface.</p>
-
-<h3 id="open-iterm-here">Open iTerm Here</h3>
-
-<p>Not strictly <em>software</em>, but rather a Mac OS X workflow that adds a context menu
-item in Finder that when invoked opens an
-<a href="http://iterm.sourceforge.net/">iTerm</a> terminal tab, cd-ing to the selected
-directory. It is rather neat and useful if you use a lot of terminal applications
-in the Mac, and if you, like me, does not like Terminal.app too much. This
-workflow was inspired by <a href="http://blog.leenarts.net/2009/09/03/open-service-here/">Jeroen
-Leenars’s</a> workflow that
-opens Terminal.app instead of iTerm. Most of the code was unashamedly poached
-from an old <a href="http://www.macosxhints.com/article.php?story=20050827164648766&amp;lsrc=osxh">macosxhints
-forum</a>,
-attesting to my relative ignorance of Mac OS X scripting.</p>
-
-<p><strong>Downloads:</strong> <a href="/felipe/download/open-here.zip">Open iTerm Here</a>. It
-is provided as is, I do not guarantee it will work, even though it has worked in
-my Snow Leopard installation. It includes installation instructions, which are
-basically the following: open the zip file, go into the <code class="language-plaintext highlighter-rouge">open-here</code> folder, and
-copy <code class="language-plaintext highlighter-rouge">Open iTerm Here.workflow</code> to <code class="language-plaintext highlighter-rouge">~/Library/Services</code>.</p>
 
         
       </section>
