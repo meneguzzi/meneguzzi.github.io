@@ -1,5 +1,1 @@
-# /robots.txt file for http://www.meneguzzi.eu
-# mail felipe@meneguzzi.eu for constructive criticism
-
-User-agent: *
-Disallow: /download/
+Sitemap: https://www.meneguzzi.eu/felipe/sitemap.xml

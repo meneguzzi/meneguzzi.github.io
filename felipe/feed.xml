@@ -1,1 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.meneguzzi.eu/felipe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.meneguzzi.eu/felipe/" rel="alternate" type="text/html" /><updated>2026-08-23T17:31:19+01:00</updated><id>https://www.meneguzzi.eu/felipe/feed.xml</id><title type="html">Felipe Meneguzzi</title><subtitle>Felipe Meneguzzi — Chair of Computing Science at the University of Aberdeen. Research on automated planning, goal and plan recognition, multiagent systems, BDI agents, and machine learning.</subtitle><author><name>Felipe Meneguzzi</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.meneguzzi.eu/felipe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.meneguzzi.eu/felipe/" rel="alternate" type="text/html" /><updated>2026-09-30T15:21:27+01:00</updated><id>https://www.meneguzzi.eu/felipe/feed.xml</id><title type="html">Felipe Meneguzzi | Notes</title><subtitle>Felipe Meneguzzi — Chair of Computing Science at the University of Aberdeen. Research on automated planning, goal and plan recognition, multiagent systems, BDI agents, and machine learning.</subtitle><author><name>Felipe Meneguzzi</name></author><entry><title type="html">On Logic Terminology</title><link href="https://www.meneguzzi.eu/felipe/notes/logic-terminology/" rel="alternate" type="text/html" title="On Logic Terminology" /><published>2020-07-10T00:00:00+01:00</published><updated>2020-07-10T00:00:00+01:00</updated><id>https://www.meneguzzi.eu/felipe/notes/logic-terminology</id><content type="html" xml:base="https://www.meneguzzi.eu/felipe/notes/logic-terminology/"><![CDATA[<p>When I started working on and eventually writing about logic-based agents, I
+always remember having had some difficulty describing the logic formalism in a
+way that is informative and yet reads well. I have found a very concise and yet
+correct description of this terminology reading a paper from <a href="https://homes.cs.washington.edu/~pedrod/">Pedro
+Domingos</a> on <a href="https://homes.cs.washington.edu/~pedrod/papers/pilp.pdf">Markov
+Logics</a>. This
+description turns out to read so well that he has used it verbatim in almost a
+dozen papers and book chapters. So I took the liberty to adapt this description
+for my website in the section below. Notice that, unlike <em>Prolog</em>, the
+convention used in this description is that constants are represented as strings
+starting with an <em>uppercase</em> letter whereas variables are represented as strings
+starting with a <em>lowercase</em> letter.</p>
+
+<h2 id="first-order-logic">First-order logic</h2>
+
+<p>A <em>first-order knowledge base</em> (KB) is a set of sentences or formulas in
+first-order logic. Formulas in first-order logic (FOL) are constructed using
+four types of symbols: constants, variables, functions, and predicates. Constant
+symbols represent objects in the domain of interest (e.g., people: <code class="language-plaintext highlighter-rouge">Anna</code>,
+<code class="language-plaintext highlighter-rouge">Bob</code>, <code class="language-plaintext highlighter-rouge">Chris</code>, etc.). Variable symbols range over the objects in the domain.
+Function symbols (e.g., <code class="language-plaintext highlighter-rouge">MotherOf</code>) represent mappings from tuples of objects to
+objects. Predicate symbols represent relations among objects in the domain
+(e.g., <code class="language-plaintext highlighter-rouge">Friends</code>) or attributes of objects (e.g., <code class="language-plaintext highlighter-rouge">Smokes</code>). An <em>interpretation</em>
+specifies which objects, functions and relations in the domain are represented
+by which symbols. Variables and constants may be typed, in which case variables
+range only over objects of the corresponding type, and constants can only
+represent objects of the corresponding type. For example, the variable <code class="language-plaintext highlighter-rouge">x</code>
+might range over people (e.g., Anna, Bob, etc.), and the constant <code class="language-plaintext highlighter-rouge">C</code> might
+represent a city (e.g., Seattle, Tokyo, etc.).</p>
+
+<p>A <em>term</em> is any expression representing an object in the domain. It can be a
+constant, a variable, or a function applied to a tuple of terms. For example,
+<code class="language-plaintext highlighter-rouge">Anna</code>, <code class="language-plaintext highlighter-rouge">x</code>, and <code class="language-plaintext highlighter-rouge">GreatestCommonDivisor(x, y)</code> are terms. An <em>atomic formula</em>
+or <em>atom</em> is a predicate symbol applied to a tuple of terms (e.g.,
+<code class="language-plaintext highlighter-rouge">Friends(x, MotherOf(Anna))</code>). Formulas are recursively constructed from atomic
+formulas using logical connectives and quantifiers. If \(F_1\) and \(F_2\) are
+formulas, the following are also formulas:</p>
+
+<ul>
+  <li>\(\neg F_1\) (negation), which is true if and only if \(F_1\) is false;</li>
+  <li>\(F_1 \wedge F_2\) (conjunction), which is true if and only if both \(F_1\)
+and \(F_2\) are true;</li>
+  <li>\(F_1 \vee F_2\) (disjunction), which is true if and only if \(F_1\) or
+\(F_2\) is true;</li>
+  <li>\(F_1 \Rightarrow F_2\) (implication), which is true if and only if \(F_1\)
+is false or \(F_2\) is true;</li>
+  <li>\(F_1 \Leftrightarrow F_2\) (equivalence), which is true if and only if
+\(F_1\) and \(F_2\) have the same truth value;</li>
+  <li>\(\forall x\, F_1\) (universal quantification), which is true if and only if
+\(F_1\) is true for every object \(x\) in the domain; and</li>
+  <li>\(\exists x\, F_1\) (existential quantification), which is true if and only
+if \(F_1\) is true for at least one object \(x\) in the domain.</li>
+</ul>
+
+<p>Parentheses may be used to enforce precedence. A <em>positive literal</em> is an atomic
+formula; a <em>negative literal</em> is a negated atomic formula. The formulas in a KB
+are implicitly conjoined, and thus a KB can be viewed as a single large formula.
+A <em>ground term</em> is a term containing no variables. A <em>ground atom</em> or <em>ground
+predicate</em> is an atomic formula all of whose arguments are ground terms. A
+<em>possible world</em> (along with an interpretation) assigns a truth value to each
+possible ground atom.</p>
+
+<p>A formula is <em>satisfiable</em> if and only if there exists at least one world in
+which it is true. The basic inference problem in first-order logic is to
+determine whether a knowledge base \(\mathit{KB}\) entails a formula \(F\),
+i.e., if \(F\) is true in all worlds where \(\mathit{KB}\) is true (denoted by
+\(\mathit{KB} \models F\)). This is often done by <em>refutation</em>: \(\mathit{KB}\)
+entails \(F\) if and only if \(\mathit{KB} \cup \{\neg F\}\) is unsatisfiable.
+(Thus, if a KB contains a contradiction, all formulas trivially follow from it,
+which makes painstaking knowledge engineering a necessity.) For automated
+inference, it is often convenient to convert formulas to a more regular form,
+typically <em>clausal form</em> (also known as <em>conjunctive normal form (CNF)</em>). A KB
+in clausal form is a conjunction of <em>clauses</em>, a clause being a disjunction of
+literals. Every KB in first-order logic can be converted to clausal form using a
+mechanical sequence of steps.<sup id="fnref:skolem"><a href="#fn:skolem" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Clausal form is used in resolution, a
+sound and refutation-complete inference procedure for first-order logic.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:skolem">
+      <p>This conversion includes the removal of existential quantifiers by
+Skolemization, which is not sound in general. However, in finite domains an
+existentially quantified formula can simply be replaced by a disjunction of
+its groundings. <a href="#fnref:skolem" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Felipe Meneguzzi</name></author><summary type="html"><![CDATA[A concise, correct way to introduce first-order logic in a paper, adapted from Pedro Domingos.]]></summary></entry></feed>

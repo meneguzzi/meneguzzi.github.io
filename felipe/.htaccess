@@ -1,4 +1,57 @@
-Options +Includes
-AddType text/html .shtml
-AddOutputFilter INCLUDES .shtml
+# Apache configuration for /felipe/ only.
+#
+# The ROOT .htaccess is a separate file and is not managed here: it carries the
+# PHP flags, DirectoryIndex, the ErrorDocument pages and the agent-tracker
+# redirects (/prefs, /verify, /ack, /instructions, /rubric). Apache merges both,
+# root first. Nothing below shadows a root directive.
+
+# ── Content types ───────────────────────────────────────────────────────────
+# .bib files are meant to be read in the browser, not downloaded.
 AddType text/plain .bib
+
+# ── Old URLs ────────────────────────────────────────────────────────────────
+# The SHTML site's 15 pages became 10 Jekyll pages with pretty permalinks. These
+# are permanent redirects so that inbound links, citations and search results
+# keep working. Anchors are resolved by the browser, not the server, so the
+# fragment targets below are honoured.
+#
+# RedirectMatch rather than Redirect: Redirect matches by prefix, which would
+# also catch things like /felipe/people.shtml.bak. The $ anchors make each rule
+# exact.
+
+# Pages that map one to one
+RedirectMatch 301 ^/felipe/index\.shtml$            /felipe/
+RedirectMatch 301 ^/felipe/research\.shtml$         /felipe/research/
+RedirectMatch 301 ^/felipe/publications\.shtml$     /felipe/publications/
+RedirectMatch 301 ^/felipe/software\.shtml$         /felipe/software/
+RedirectMatch 301 ^/felipe/people\.shtml$           /felipe/people/
+RedirectMatch 301 ^/felipe/students\.shtml$         /felipe/students/
+RedirectMatch 301 ^/felipe/service\.shtml$          /felipe/service/
+RedirectMatch 301 ^/felipe/students-brazil\.shtml$  /felipe/brazil/
+
+# The one page outside the old sidebar, now the first entry of the notes collection
+RedirectMatch 301 ^/felipe/notes/logic-terminology\.shtml$  /felipe/notes/logic-terminology/
+
+# Pages that were folded into a section of another page
+RedirectMatch 301 ^/felipe/felipe\.shtml$           /felipe/about/
+RedirectMatch 301 ^/felipe/contact\.shtml$          /felipe/about/#contact
+RedirectMatch 301 ^/felipe/presentations\.shtml$    /felipe/about/#talks
+RedirectMatch 301 ^/felipe/projects\.shtml$         /felipe/research/#projects
+RedirectMatch 301 ^/felipe/writing\.shtml$          /felipe/resources/#writing
+
+# Pages that carried no content: links.shtml and photos.shtml were headings with
+# a non-breaking space and nothing else. Send them to the home page rather than
+# to a 404, since they were linked from every page of the old sidebar.
+RedirectMatch 301 ^/felipe/links\.(shtml|php)$      /felipe/
+RedirectMatch 301 ^/felipe/photos\.(shtml|php)$     /felipe/
+
+# One PDF was renamed to drop a literal "+" from a published URL.
+RedirectMatch 301 ^/felipe/pubs/pair-latrec\+-demo-2020\.pdf$  /felipe/pubs/pair-latrecplus-demo-2020.pdf
+
+# Legacy .html stubs. publications.html was a meta-refresh to publications.shtml;
+# redirect it straight to the destination rather than through two hops.
+RedirectMatch 301 ^/felipe/publications\.html$      /felipe/publications/
+
+# Any other .shtml directly under /felipe/. The old site had no further pages,
+# so this catches typos and stale deep links rather than 404ing them.
+RedirectMatch 301 ^/felipe/[^/]+\.shtml$           /felipe/

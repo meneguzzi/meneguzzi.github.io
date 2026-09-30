@@ -26,29 +26,8 @@
 /* Colors */
 /* The masthead sits on white; keep it near-black so the green stays an accent
    rather than becoming the loudest thing on the page. */
-/* The theme's footer text defaults to a grey that vanishes on a dark ground. */
-.page__footer {
-  color: #e8efe0 !important;
-}
-
-.page__footer a {
-  color: #cfe0bd;
-}
-.page__footer a:hover {
-  color: #ffffff;
-}
-
-.page__footer-follow .social-icons i,
-.page__footer-follow .social-icons .svg-inline--fa {
-  color: inherit;
-}
-
-/* The author profile's avatar is a headshot on white; without a border it
-   bleeds into the page. */
-.author__avatar img {
-  border: 1px solid #dde3d4;
-}
-
+/* Rules (as opposed to variables) live in assets/css/main.scss, which is
+   compiled after the theme's partials and so needs no !important. */
 /* Copyright comment */
 /*!
  * Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
@@ -5281,6 +5260,33 @@ body {
     display: none !important;
     height: 1px !important;
   }
+}
+/* ==========================================================================
+   Site rules. Anything here comes AFTER the theme's partials, so it wins on
+   equal specificity without !important. The skin file (_sass/…/_meneguzzi.scss)
+   is imported first and should hold variables only.
+   ========================================================================== */
+/* The theme's footer text defaults to a grey that vanishes on the dark green
+   footer ground the skin sets. */
+.page__footer {
+  color: #e8efe0;
+}
+.page__footer a {
+  color: #cfe0bd;
+}
+.page__footer a:hover {
+  color: #ffffff;
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+
+/* The author profile's avatar is a headshot on white; without a border it
+   bleeds into the page. */
+.author__avatar img {
+  border: 1px solid #dde3d4;
 }
 
 /*# sourceMappingURL=main.css.map */
