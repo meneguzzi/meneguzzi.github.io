@@ -1,6 +1,6 @@
 # Apache configuration for /felipe/ only.
 #
-# The ROOT .htaccess is a separate file and is not managed here: it carries the
+# The ROOT .htaccess is a separate file and is not managed here: it holds the
 # PHP flags, DirectoryIndex, the ErrorDocument pages and the agent-tracker
 # redirects (/prefs, /verify, /ack, /instructions, /rubric). Apache merges both,
 # root first. Nothing below shadows a root directive.
@@ -39,7 +39,7 @@ RedirectMatch 301 ^/felipe/presentations\.shtml$    /felipe/about/#talks
 RedirectMatch 301 ^/felipe/projects\.shtml$         /felipe/research/#projects
 RedirectMatch 301 ^/felipe/writing\.shtml$          /felipe/resources/#writing
 
-# Pages that carried no content: links.shtml and photos.shtml were headings with
+# Pages that had no content: links.shtml and photos.shtml were headings with
 # a non-breaking space and nothing else. Send them to the home page rather than
 # to a 404, since they were linked from every page of the old sidebar.
 RedirectMatch 301 ^/felipe/links\.(shtml|php)$      /felipe/
